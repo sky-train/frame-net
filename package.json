@@ -1,0 +1,10 @@
+{
+  "name": "net-framing",
+  "version": "1.0.0",
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
