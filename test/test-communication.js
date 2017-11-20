@@ -1,6 +1,6 @@
 const net = require('net');
 const assert = require('assert');
-const { protocol, Queue } = require('../index');
+const { frame, Queue } = require('../index');
 
 const sQueue          = new Queue();
 const cQueue          = new Queue();
@@ -13,7 +13,7 @@ let server = new net.Server();
 server.listen({ path });
 
 server.on('connection', ( socket )=> {
-  protocol( socket ).on('message',( message )=> {
+  frame( socket ).on('message',( message )=> {
    sQueue.push( message, socket );
   });
 });
@@ -24,7 +24,7 @@ describe('Client <-> Server',function(){
   client =  new net.Socket();
   client.connect({ path });
 
-  protocol(client).on('message',( message )=> {
+  frame(client).on('message',( message )=> {
     cQueue.push( message );
   });
     it('client',function( done ) {
