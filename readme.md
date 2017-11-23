@@ -16,7 +16,7 @@ server.on('connection', ( socket )=> {
 });
 
 queue.on( 'next', ( data, socket )=> {
-  socket.send( new Message( { data: Buffer.from("send data to client") } ) );
+  socket.send( new Message( Buffer.from("send data to client") ) );
 });
 ```
 client
@@ -27,14 +27,11 @@ const { frame, Message, Queue } = require('framed-net');
 const queue    = new Queue();
 const client   = new net.Socket({});
 
-client.on('connection', ( socket )=> {
-  protocol( socket )
-    .on('message', ( data )=> {
+frame(client).on('message', ( data )=> {
         queue.push(data);
-      });
 });
 
 queue.on( 'next', ( data  )=> {
-  socket.send(  new Message( { data: Buffer.from("send data to server") } ) );
+  socket.send(  new Message( Buffer.from("send data to server") ) );
 });
 ```
