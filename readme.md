@@ -1,9 +1,9 @@
-####framed-net
+#### frame-net
 
 #  
 server
 ```javascript
-const { frame, Message, Queue } = require('framed-net');
+const { frame, Message, Queue } = require('frame-net');
 
 const queue    = new Queue();
 const server   = new net.createServer({});
@@ -22,7 +22,7 @@ queue.on( 'next', ( data, socket )=> {
 client
 
 ```javascript
-const { frame, Message, Queue } = require('framed-net');
+const { frame, Message, Queue } = require('frame-net');
 
 const queue    = new Queue();
 const client   = new net.Socket({});
