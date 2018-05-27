@@ -14,8 +14,9 @@ server.listen({ path });
 server.on('connection', ( socket )=> {
   frame( socket ).on('message',( message )=> {
     if( message.type === 1 ) {
+
       message.body = resBody;
-      socket.send(message);
+      setTimeout(()=>{ socket.send(message);}, 80 );
     }
   });
 });
@@ -35,9 +36,11 @@ describe('fetch',function(){
     
   it('client.fetch()',function( done ) {
 
-    client.fetch(reqBody).then( ( message )=> {
+    client.fetch(reqBody, 100 ).then( ( message )=> {
       assert.equal(message.body.compare(resBody),0);
       done();
+    }).catch(( err )=>{
+      console.log(err);
     });
 
   });
