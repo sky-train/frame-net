@@ -4,7 +4,6 @@ const { frame, Queue } = require('../index');
 
 const reqBody = Buffer.from('test string');
 const resBody = Buffer.from('response test string'.repeat( 16384 ) );
-console.log(resBody.length)
 const path = `/tmp/stock-${Date.now()}`;
 
 let server = new net.Server();
@@ -36,7 +35,7 @@ describe('fetch',function(){
     
   it('client.fetch()',function( done ) {
 
-    client.fetch(reqBody, 100 ).then( ( message )=> {
+    client.fetch(reqBody, 82 ).then( ( message )=> {
       assert.equal(message.body.compare(resBody),0);
       done();
     }).catch(( err )=>{
