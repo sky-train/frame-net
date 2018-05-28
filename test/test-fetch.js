@@ -3,8 +3,8 @@ const assert = require('assert');
 const { frame, Queue } = require('../index');
 
 const reqBody = Buffer.from('test string');
-const resBody = Buffer.from('response test string');
-
+const resBody = Buffer.from('response test string'.repeat( 16384 ) );
+console.log(resBody.length)
 const path = `/tmp/stock-${Date.now()}`;
 
 let server = new net.Server();
