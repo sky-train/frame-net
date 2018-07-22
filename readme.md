@@ -1,36 +1,44 @@
 #frame-net
 
+##socket.send
 server
 ```javascript
-const { frame, Message, Queue } = require('frame-net');
-
-const queue    = new Queue();
+const { frame } = require('frame-net');
 const server   = new net.createServer();
 
 server.on('connection', ( socket )=> {
-  frame( socket )
-    .on('message', ( data )=> {
-        queue.push(data, socket);
-      });
+  frame( socket ).on('message', ( message )=> {
+    console.log( typeof( message ) );
+  });
 });
 
-queue.on( 'next', ( data, socket )=> {
-  socket.send( new Message( Buffer.from("send data to client") ) );
-});
 ```
 client
 
 ```javascript
-const { frame, Message, Queue } = require('frame-net');
+const { fram } = require('frame-net');
 
-const queue    = new Queue();
 const client   = new net.Socket();
 
-frame(client).on('message', ( data )=> {
-        queue.push(data);
+frame(client).on('message', ( message )=> {
+  console.log( typeof( message ) );
 });
 
-queue.on( 'next', ( data  )=> {
-  socket.send(  new Message( Buffer.from("send data to server") ) );
-});
+client.send( Buffer.from( 'test' ) );
+
+```
+
+##socket.fetch
+server
+```javascript
+
+frame(client)
+
+client.fetch( Buffer.from( 'request' ) ).then(( res )=>{
+  console.log( typeof( res ) );
+})
+.catch( ( err )=>{
+
+})
+
 ```
