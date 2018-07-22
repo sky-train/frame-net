@@ -1,6 +1,7 @@
-#frame-net
+#frame-net  
 
-##socket.send
+##socket.send 
+
 server
 ```javascript
 const { frame } = require('frame-net');
@@ -28,7 +29,8 @@ client.send( Buffer.from( 'test' ) );
 
 ```
 
-##socket.fetch
+##socket.fetch  
+
 server
 ```javascript
 
