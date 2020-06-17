@@ -1,5 +1,9 @@
+const { wrapper } = require('./lib/wrapper');
+const { Request } = require('./lib/request');
+const { forwardEvent } = require('./lib/utils');
+
 module.exports = {
-  Queue :require('./lib/queue').Queue,
-  frame :require('./lib/protocol').frame,
-  Message :require('./lib/message').Message
-};
+  Request,
+  wrapper,
+  forwardEvent
+}
