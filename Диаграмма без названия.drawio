@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-13T23:28:55.826Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="AZs9NRA1oMi4_6U_XlBh" version="24.5.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-13T23:30:57.658Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="-rMx84GsWxg37ZMC6ym7" version="24.5.4" type="github">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1103" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -9,6 +9,9 @@
         </mxCell>
         <mxCell id="3" value="Engineering" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=3;fillColor=#56517E;labelBackgroundColor=none;strokeColor=#EEEEEE;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="246" y="126" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Pgat_m_mGUm1OShCnL_0-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#182E3E;" edge="1" parent="1" source="4" target="Pgat_m_mGUm1OShCnL_0-96">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4" value="Investors" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=3;fillColor=#56517E;labelBackgroundColor=none;strokeColor=#EEEEEE;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="40" y="251" width="90" height="60" as="geometry" />
@@ -312,6 +315,9 @@
         </mxCell>
         <mxCell id="96" value="System&#xa;version" style="text;spacingTop=-5;align=center;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="350.9999999999998" y="461" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Pgat_m_mGUm1OShCnL_0-96" value="22" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#56517E;strokeColor=#EEEEEE;fontColor=#FFFFFF;fontStyle=1;strokeWidth=3;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="25" y="101" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
